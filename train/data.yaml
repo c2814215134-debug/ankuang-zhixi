@@ -1,0 +1,16 @@
+# 工序指示牌数据集配置（单类别：signage 工序指示牌）
+# 用法（在仓库根目录，先 pip install -e framework/）：
+#   yolo detect train data=train/data.yaml \
+#        model=framework/ultralytics/cfg/models/11/yolo11-attention.yaml epochs=300 imgsz=640
+# 目录结构：images/{train,val,test} 与 labels/{train,val,test} 一一对应，YOLO 格式标注
+
+path: ./
+train: images/train
+val: images/val
+test: images/test
+
+# number of classes
+nc: 1
+
+# class names
+names: ['signage']

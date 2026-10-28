@@ -1,0 +1,22 @@
+Flask==2.3.3
+Flask-CORS==4.0.0
+python-dotenv==1.0.0
+Pillow==10.0.0
+numpy<2.0.0
+opencv-python-headless==4.8.0.76
+Flask-SQLAlchemy>=3.0.0
+Flask-Migrate>=4.0.0
+# ultralytics 由仓库 framework/ 提供（含自定义模块），勿装 PyPI 版：
+#   pip install -e framework/
+# ultralytics
+paddlepaddle>=2.5.0
+paddleocr>=2.7.0
+torch
+torchvision
+
+timm==1.0.20
+thop
+einops==0.8.1
+efficientnet_pytorch==0.7.1
+dill==0.3.4
+PyWavelets==1.4.1

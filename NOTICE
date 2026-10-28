@@ -1,0 +1,86 @@
+安矿智析 · 煤矿钻场视频智能剪辑与数据管理平台
+第三方开源资源许可与版权声明
+================================================
+
+本作品在以下开源项目之上构建。团队按各许可证要求保留版权与许可声明，
+未使用任何项目的商标暗示官方背书。完整清单（含版本、使用方式、关键义务、
+自主开发边界、合规状态）见随作品提交的《开源及第三方资源使用清单》
+（技术报告附录表 A1）。
+
+--------------------------------------------------------------------------
+一、AGPL-3.0（衍生作品，整体同许可发布）
+--------------------------------------------------------------------------
+Ultralytics YOLO11 (ultralytics==8.3.9)
+  Copyright (c) Ultralytics. Licensed under AGPL-3.0.
+  https://github.com/ultralytics/ultralytics
+  修改内容：① 以 C3k2_Faster_EMA 替换 C3k2（新增 FasterBlock + PConv + EMA）；
+            ② 主干末端插入 TripletAttention 并调整颈部跳跃连接；
+            ③ bbox_iou() 新增 PIoU / PIoU2 损失分支；
+            ④ 检测头替换为 Detect_Efficient。
+  修改点逐条见 train/piouv2_patch.md。
+  义务履行：包含 Ultralytics 衍生代码的部分整体以 AGPL-3.0 发布（见 LICENSE）；
+            若以网络服务形式对外提供，按 AGPL 第 13 条向使用者提供源代码获取方式。
+
+--------------------------------------------------------------------------
+二、Apache-2.0
+--------------------------------------------------------------------------
+PaddleOCR（PP-OCRv4）  https://github.com/PaddlePaddle/PaddleOCR
+PaddlePaddle            https://github.com/PaddlePaddle/Paddle
+OpenCV                  https://github.com/opencv/opencv
+ECharts                 https://github.com/apache/echarts
+Video.js                https://github.com/videojs/video.js
+  义务履行：保留版权与许可声明，并在衍生文件中标注修改；不使用其商标暗示背书。
+  修改内容：以 YOLO 检测框裁剪替代 PaddleOCR 原生 DBNet 文字检测环节，
+            并自定义工序字典与后处理逻辑。
+
+--------------------------------------------------------------------------
+三、BSD 类
+--------------------------------------------------------------------------
+PyTorch                 BSD-3-Clause   https://github.com/pytorch/pytorch
+Flask / Flask-SQLAlchemy / Flask-CORS   BSD-3-Clause   https://github.com/pallets/flask
+imageio-ffmpeg          BSD-2-Clause   https://github.com/imageio/imageio-ffmpeg
+  义务履行：保留版权声明与免责条款。
+
+--------------------------------------------------------------------------
+四、MIT
+--------------------------------------------------------------------------
+Vue 3 / Vue Router / Pinia      https://github.com/vuejs/core
+Element Plus                    https://github.com/element-plus/element-plus
+Vite                            https://github.com/vitejs/vite
+ONNX Runtime                    https://github.com/microsoft/onnxruntime
+@videojs-player/vue             https://github.com/videojs-player/vue
+  义务履行：保留版权与许可声明。
+
+--------------------------------------------------------------------------
+五、其他
+--------------------------------------------------------------------------
+FFmpeg                  LGPL-2.1+（含 GPL 组件时为 GPL-2.0+）  https://ffmpeg.org/
+  使用方式：以 subprocess 子进程方式调用系统中已安装的 FFmpeg 二进制。
+            未修改其源码、未静态或动态链接、未随作品再分发其二进制。
+  义务履行：保留许可与版权声明；FFmpeg 二进制保持可被替换。
+  说明：开发早期曾使用 ffmpy（GPL-3.0）封装，为消除 copyleft 传染风险已移除，
+        改为 subprocess 直接调用（见 backend/ai_engine.py 的 _get_ffmpeg_path()）。
+
+SQLite                  Public Domain   https://www.sqlite.org/
+
+Noto Sans SC（思源黑体） SIL Open Font License 1.1
+  来源：仓库 fonts/NotoSansSC-Regular.otf，随作品分发并保留许可声明。
+  说明：原视频叠加文字使用专有字体 SimHei（不得再分发），已替换为思源黑体；
+        专有字体文件不进入仓库。
+
+PyQt5                   GPL-3.0 / 商业双许可
+  使用方式：桌面端示例程序 train/meV2027v51.py；不随作品分发可执行文件。
+
+Milk-V Duo 硬件与板端系统镜像
+  遵守硬件厂商使用条款，用于 RISC-V 边缘端部署验证。
+
+--------------------------------------------------------------------------
+六、数据与知识产权边界
+--------------------------------------------------------------------------
+自建"煤矿钻场工序指示牌"数据集（6332 张）由团队采集与标注，受限开放：
+  - 原始监控视频与完整标注文件涉合作矿井生产信息，不出矿、不上传公网；
+  - 仅开放数据集结构说明、标注规范与少量脱敏样例（见 dataset_description/）；
+  - 标注阶段已完成脱敏：不含人员面部特写、工牌号码与人员身份信息；
+  - 作品不采集、不存储任何个人身份信息，不涉及人脸识别。
+
+本 NOTICE 随作品一并提交，内容真实完整。
