@@ -1676,7 +1676,7 @@ class DeveloperInfoPage(QWidget):
         <h3 style='color:#A4C8F5;'>项目名称</h3>
         <p>煤矿钻场视频智能剪辑与数据管理平台———Client端</p>
         <h3 style='color:#A4C8F5;'>开发团队</h3>
-        <p>河南理工大学智能矿山技术研发组</p>
+        <p>矿钻智眸团队</p>
         <h3 style='color:#A4C8F5;'>系统简介</h3>
         <p>本系统基于YOLO目标检测算法和PaddleOCR文字识别技术，实现对煤矿钻场施工过程中关键工序的自动识别、视频剪辑和关键环节归档。</p>
         <p>系统能够自动识别"开孔"、"见煤"、"验煤"、"止煤"、"终孔"、"验孔"和"封孔"七个关键工序状态，并根据识别结果自动剪辑视频，提高工作效率。</p>
@@ -1691,8 +1691,8 @@ class DeveloperInfoPage(QWidget):
         <h3 style='color:#A4C8F5;'>版本信息</h3>
         <p>版本号：v1.0.0</p>
         <p>发布日期：2026年1月</p>
-        <h3 style='color:#A4C8F5;'>联系方式</h3>
-        <p>邮箱：2814215134@qq.com</p>
+        <h3 style='color:#A4C8F5;'>项目主页</h3>
+        <p>https://github.com/c2814215134-debug/ankuang-zhixi</p>
         """
         info_browser.setHtml(info_html)
         main_layout.addWidget(info_browser)
